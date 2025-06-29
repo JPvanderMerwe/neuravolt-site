@@ -150,15 +150,17 @@
     document.querySelector('#emailForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.querySelector('#emailInput').value;
+
       try {
         await addDoc(collection(db, "signups"), { email, createdAt: new Date() });
-        alert("Thanks for signing up! ✅");
+        alert("✅ You're on the list! Check your inbox for a welcome email.");
         document.querySelector('#emailForm').reset();
       } catch (err) {
-        alert("Something went wrong. Try again.");
+        alert("❌ Something went wrong. Try again.");
         console.error(err);
       }
     });
+
   </script>
 </footer>  
 </html>
