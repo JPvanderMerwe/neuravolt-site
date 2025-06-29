@@ -122,8 +122,43 @@
 
   <div class="footer animate__animated animate__fadeInUp animate__delay-4s">&copy; 2025 NeuraVolt. All rights reserved.</div>
 </body>
-<form action="https://formspree.io/f/{your-form-id}" method="POST">
-  <input type="email" name="email" placeholder="Enter your email" required />
-  <button type="submit">Notify Me</button>
+
+<form id="emailForm">
+  <input id="emailInput" type="email" placeholder="Your email" required />
+  <button type="submit">Join the waitlist</button>
 </form>
+
+<footer>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+    import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyDMv-wQZDOP7Pein4UFflT_8-gBthStqbY",
+      authDomain: "neuravolt-site.firebaseapp.com",
+      projectId: "neuravolt-site",
+      storageBucket: "neuravolt-site.firebasestorage.app",
+      messagingSenderId: "704375073932",
+      appId: "1:704375073932:web:b0785fb3efdb9ba736dfa9",
+      measurementId: "G-L5EMTV47LT"
+    };
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    // Form handler
+    document.querySelector('#emailForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.querySelector('#emailInput').value;
+      try {
+        await addDoc(collection(db, "signups"), { email, createdAt: new Date() });
+        alert("Thanks for signing up! ✅");
+        document.querySelector('#emailForm').reset();
+      } catch (err) {
+        alert("Something went wrong. Try again.");
+        console.error(err);
+      }
+    });
+  </script>
+</footer>  
 </html>
