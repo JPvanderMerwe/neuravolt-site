@@ -4,14 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="NeuraVolt is building the future of intelligent drones and electronics in South Africa." />
-  <title>NeuraVolt | Coming Soon</title>
+  <title>NeuraVolt | Pioneering Intelligent Systems</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0e0e0e;
@@ -19,40 +22,98 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 2rem;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 2rem 1rem;
       text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      font-weight: 600;
+
+    .logo {
+      width: 80px;
+      height: auto;
       margin-bottom: 1rem;
+    }
+
+    .main-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
       color: #00ffe7;
     }
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-      color: #c4c4c4;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
     }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      color: #c4c4c4;
+      line-height: 1.6;
+    }
+
     .email {
       font-weight: 600;
       color: #ffffff;
       text-decoration: underline;
     }
+
     .footer {
-      position: absolute;
-      bottom: 1rem;
+      margin-top: auto;
       font-size: 0.875rem;
       color: #555;
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .logo {
+        width: 60px;
+      }
     }
   </style>
 </head>
-<body>
-  <h1>NeuraVolt</h1>
-  <p>We're building cutting-edge drone technology and intelligent electronics in South Africa. Our vision is to revolutionize the skies by combining machine learning, custom hardware, and visionary product design.</p>
-  <p>Website coming soon. For inquiries, contact <span class="email">jp@neuravolt.io</span></p>
-  <div class="footer">&copy; 2025 NeuraVolt. All rights reserved.</div>
+<body class="animate__animated animate__fadeIn">
+  <img src="assets/images/logo.PNG" alt="NeuraVolt Icon Logo" class="logo animate__animated animate__fadeInDown" />
+  <img src="assets/images/neuravolt_image1.png" alt="NeuraVolt Drone Illustration" class="main-image animate__animated animate__zoomIn" />
+
+  <h1 class="animate__animated animate__fadeInUp animate__delay-1s">NeuraVolt</h1>
+  <h2 class="animate__animated animate__fadeInUp animate__delay-1s">Pioneering Intelligent Systems</h2>
+  <p class="animate__animated animate__fadeInUp animate__delay-2s">
+    At NeuraVolt, we're building cutting-edge drone technology and intelligent electronics
+    in South Africa. Our vision is to revolutionize the skies by combining custom-built
+    FPV drones, embedded AI, and hardware engineering.
+  </p>
+  <p class="animate__animated animate__fadeInUp animate__delay-2s">
+    We are actively developing proprietary flight controllers, ESC stacks, and AI-powered
+    navigation systems. This is just the beginning of a high-voltage future.
+  </p>
+  <p class="animate__animated animate__fadeInUp animate__delay-3s">Website coming soon. For inquiries, contact <span class="email">jp@neuravolt.io</span></p>
+
+  <div class="footer animate__animated animate__fadeInUp animate__delay-4s">&copy; 2025 NeuraVolt. All rights reserved.</div>
 </body>
 </html>
